@@ -1,0 +1,63 @@
+<!--Define el tipo de documento como HTML5.-->
+<!DOCTYPE html>
+<!--La etiqueta raíz que indica que el contenido es HTML y establece el idioma en inglés.-->
+<html lang="en">
+ <!--Contiene metadatos y enlaces a recursos externos, como hojas de estilo y scripts.-->   
+<head>
+    <!--Define la codificación de caracteres como UTF-8.-->
+    <meta charset="UTF-8">
+    <!--Especifica cómo se debe controlar el tamaño y la escala de la página en diferentes dispositivos.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaza una hoja de estilo externa llamada "style.css".-->
+    <link rel="stylesheet" href="style.css">
+    <!--Es el título del documento-->
+    <title>Documento a PDF</title>
+    <!-- Importar la librería html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<!--marca el inicio de la sección del encabezado de tu documento HTML-->
+</head>
+<!--marca el inicio del cuerpo de tu documento HTML, donde se encuentra el contenido visible de la página.-->
+<body> 
+    <!--con la clase "container" es un contenedor que envuelve todo el contenido que queremos convertir en PDF.-->
+    <div class="container"> 
+        <!--con la clase "chest", que parece ser parte de la representación gráfica de un personaje.-->
+        <div class="chest">
+            <!--con la clase "shadow1", que parece ser una sombra.-->
+            <div class="shadow1">
+                <!--Representación de un ojo.-->
+                <div class="eye">
+                    <!--La parte blanca del ojo.--> 
+                    <div class="white"></div>
+                </div>
+            </div>
+        </div> 
+        <!--Parte trasera del personaje.-->
+        <div class="back">
+            <!--Una sombra de la parte trasera del personaje.-->
+            <div class="back-shadow"></div>
+            <!--Representación de una pierna izquierda.-->
+        </div>
+        <!--Representación de una pierna derecha.-->
+        <div class="left-leg"></div>
+        <!--Representación de una pierna central.-->
+        <div class="right-leg"></div>
+        <!--Otra representación de una pierna central.-->
+        <div class="middle-leg"></div>
+        <!--Otra representación de una pierna central.-->
+        <div class="middle-leg2"></div>
+    </div>
+
+    <!-- Botón para generar el PDF -->
+    <button id="generate-pdf">Generar PDF</button>
+
+    <!-- Script para convertir a PDF -->
+    <!--Script JavaScript que se ejecuta cuando se hace clic en el botón "Generar PDF". Busca el contenido dentro del contenedor con la clase "container" y utiliza la librería html2pdf.js para convertirlo en un PDF y guardarlo-->
+    <script>
+        document.getElementById('generate-pdf').addEventListener('click', function() {
+            var element = document.querySelector('.container');
+            html2pdf().from(element).save();
+        });
+    </script>
+    <!--Cierre del cuerpo y del documento HTML.-->
+</body>
+</html>

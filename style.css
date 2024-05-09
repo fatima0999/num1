@@ -1,0 +1,157 @@
+/*Selecciona todos los elementos HTML.*/
+*{
+    /* Establece el margen de todos los elementos en 0. Esto elimina cualquier margen predeterminado que los navegadores puedan aplicar a ciertos elementos*/
+    margin:0;
+    /*Establece el relleno de todos los elementos en 0. Esto elimina cualquier relleno predeterminado que los navegadores puedan aplicar a ciertos elementos.*/
+    padding:0;
+    /*stablece el modelo de caja de todos los elementos en "border-box".*/
+    box-sizing:border-box;
+    
+    
+  }
+  /*Selecciona el elemento raíz del documento HTML.*/
+    :root{
+    /*Define una variable CSS llamada --MainColor con el valor rgb(227,9,8), que corresponde a un tono de rojo.*/
+    --MainColor:rgb(227,9,8);
+    /* Define otra variable CSS llamada --Shadow con el valor rgb(145,3,63), que también corresponde a un tono de rojo, pero probablemente más oscuro.*/
+    --Shadow:rgb(145,3,63);
+    
+    }
+    /*Se manipula a la clase container con estilos css*/
+    .container {
+        height: 600px; /* Establece la altura del contenedor en 600 píxeles */
+        width: 600px; /* Establece el ancho del contenedor en 600 píxeles */
+        margin: 0 auto; /* Centra horizontalmente el contenedor con márgenes automáticos en los lados izquierdo y derecho */
+        position: relative; /* Establece la posición del contenedor como relativa para permitir el posicionamiento absoluto de elementos secundarios */
+        border-radius: 50%; /* Aplica un radio de borde del 50%, lo que hace que el contenedor tenga forma de círculo */
+    }
+    
+    /*Se manipula a la clase chest con estilos css*/
+    .chest {
+        height: 268px; /* Establece la altura del elemento en 268 píxeles */
+        width: 200px; /* Establece el ancho del elemento en 200 píxeles */
+        background-color: var(--Shadow); /* Establece el color de fondo utilizando la variable CSS --Shadow */
+        top: 50%; /* Posiciona el elemento en el 50% del desplazamiento vertical del contenedor primario */
+        left: 50%; /* Posiciona el elemento en el 50% del desplazamiento horizontal del contenedor primario */
+        transform: translate(-50%, -50%); /* Aplica una traslación del -50% tanto en el eje X como en el eje Y para centrar el elemento */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        border-radius: 37% 55% 1% 0% / 44% 45% 36% 35%; /* Aplica un radio de borde no simétrico */
+        border: 10px solid black; /* Establece un borde sólido de 10 píxeles de ancho y color negro */
+        border-bottom: none; /* Elimina el borde inferior */
+    }
+    
+    /*Se manipula a la clase shadow1 con estilos css*/
+    .shadow1 {
+        height: 210px; /* Establece la altura del elemento en 210 píxeles */
+        width: 170px; /* Establece el ancho del elemento en 170 píxeles */
+        background-color: var(--MainColor); /* Establece el color de fondo utilizando la variable CSS --MainColor */
+        top: 52%; /* Posiciona el elemento en el 52% del desplazamiento vertical del contenedor primario */
+        left: 54%; /* Posiciona el elemento en el 54% del desplazamiento horizontal del contenedor primario */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        transform: translate(-50%, -63%); /* Aplica una traslación del -50% en el eje X y -63% en el eje Y para centrar el elemento verticalmente */
+        border-radius: 45% 88% 38% 42% / 73% 64% 82% 70%; /* Aplica un radio de borde no simétrico */
+    }
+    
+    
+    /*Se manipula a la clase eye con estilos css*/
+    .eye {
+        width: 150px; /* Establece el ancho del ojo en 150 píxeles */
+        height: 106px; /* Establece la altura del ojo en 106 píxeles */
+        background-color: rgb(122, 180, 195); /* Establece el color de fondo del ojo */
+        border-radius: 44% 89% 59% 42% / 73% 58% 65% 71%; /* Aplica un radio de borde no simétrico */
+        border: 10px solid black; /* Establece un borde sólido de 10 píxeles de ancho y color negro */
+        position: absolute; /* Establece la posición del ojo como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        left: 20%; /* Posiciona el ojo a un 20% del ancho del contenedor primario */
+        top: 10%; /* Posiciona el ojo a un 10% de la altura del contenedor primario */
+        box-shadow: inset 10px -30px rgba(0,0,0,.5); /* Agrega una sombra interna al ojo */
+    }
+    
+    /*Se manipula a la clase white con estilos css*/
+    .white {
+        width: 60px; /* Establece el ancho del elemento en 60 píxeles */
+        height: 23px; /* Establece la altura del elemento en 23 píxeles */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        border-radius: 44% 89% 59% 42% / 73% 58% 65% 71%; /* Aplica un radio de borde no simétrico */
+        transform: translate(90%, 50%) rotate(5deg); /* Aplica una traslación del 90% hacia la derecha y el 50% hacia abajo, y luego rota el elemento 5 grados */
+    }
+    
+    /*Se manipula a la clase back con estilos css*/
+    .back {
+        height: 173px; /* Establece la altura del elemento en 173 píxeles */
+        width: 62px; /* Establece el ancho del elemento en 62 píxeles */
+        border: 10px solid black; /* Establece un borde sólido de 10 píxeles de ancho y color negro */
+        background-color: var(--MainColor); /* Establece el color de fondo utilizando la variable CSS --MainColor */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        top: 62.5%; /* Posiciona el elemento en el 62.5% del desplazamiento vertical del contenedor primario */
+        left: 21%; /* Posiciona el elemento en el 21% del desplazamiento horizontal del contenedor primario */
+        transform: translate(23%, -61%); /* Aplica una traslación del 23% hacia la derecha y el -61% hacia arriba */
+        border-radius: 48% 0% 1% 45% / 44% 45% 36% 58%; /* Aplica un radio de borde no simétrico */
+    }
+    
+    
+    /*Se manipula a la clase back-shadow con estilos css*/
+    .back-shadow {
+        height: 133px; /* Establece la altura del elemento en 133 píxeles */
+        width: 43px; /* Establece el ancho del elemento en 43 píxeles */
+        border: 10px solid var(--Shadow); /* Establece un borde sólido de 10 píxeles de ancho utilizando el color definido por la variable CSS --Shadow */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        top: 6%; /* Posiciona el elemento en el 6% del desplazamiento vertical del contenedor primario */
+        left: 16%; /* Posiciona el elemento en el 16% del desplazamiento horizontal del contenedor primario */
+        transform: translate(-16%, 10%); /* Aplica una traslación del -16% hacia la izquierda y el 10% hacia abajo */
+        background-color: var(--Shadow); /* Establece el color de fondo utilizando la variable CSS --Shadow */
+        border-radius: 45% 0% 0% 40% / 12% 45% 0% 58%; /* Aplica un radio de borde no simétrico */
+    }
+    
+    
+    
+    /*Se manipula a la clase left-leg con estilos css*/
+    .left-leg {
+        height: 70px; /* Establece la altura del elemento en 70 píxeles */
+        width: 84px; /* Establece el ancho del elemento en 84 píxeles */
+        background-color: var(--Shadow); /* Establece el color de fondo utilizando la variable CSS --Shadow */
+        top: 71%; /* Posiciona el elemento en el 71% del desplazamiento vertical del contenedor primario */
+        left: 32.8%; /* Posiciona el elemento en el 32.8% del desplazamiento horizontal del contenedor primario */
+        border: 10px solid black; /* Establece un borde sólido de 10 píxeles de ancho y color negro */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        border-radius: 10% 10% 38% 29% / 11% 0% 61% 100%; /* Aplica un radio de borde no simétrico */
+        border-top: none; /* Elimina el borde superior */
+    }
+    
+    /*Se manipula a la clase right-leg con estilos css*/
+    .right-leg {
+        height: 70px; /* Establece la altura del elemento en 70 píxeles */
+        width: 84px; /* Establece el ancho del elemento en 84 píxeles */
+        background-color: var(--Shadow); /* Establece el color de fondo utilizando la variable CSS --Shadow */
+        top: 71%; /* Posiciona el elemento en el 71% del desplazamiento vertical del contenedor primario */
+        left: 52.6%; /* Posiciona el elemento en el 52.6% del desplazamiento horizontal del contenedor primario */
+        border: 9.4px solid black; /* Establece un borde sólido de 9.4 píxeles de ancho y color negro */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        border-radius: 10% 10% 38% 29% / 11% 0% 61% 100%; /* Aplica un radio de borde no simétrico */
+        border-top: none; /* Elimina el borde superior */
+    }
+    
+    
+    
+    /*Se manipula a la clase middle-leg con estilos css*/
+    .middle-leg {
+        height: 13px; /* Establece la altura del elemento en 13 píxeles */
+        width: 40px; /* Establece el ancho del elemento en 40 píxeles */
+        background-color: black; /* Establece el color de fondo del elemento en negro */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        top: 70.4%; /* Posiciona el elemento en el 70.4% del desplazamiento vertical del contenedor primario */
+        left: 51.5%; /* Posiciona el elemento en el 51.5% del desplazamiento horizontal del contenedor primario */
+        border-radius: 100% 0% 100% 0% / 0% 0% 100% 0%; /* Aplica un radio de borde no simétrico */
+        transform: rotate(-5deg); /* Aplica una rotación de -5 grados al elemento */
+    }
+    
+    /*Se manipula a la clase middle-leg2 con estilos css*/
+    .middle-leg2 {
+        height: 14px; /* Establece la altura del elemento en 14 píxeles */
+        width: 40px; /* Establece el ancho del elemento en 40 píxeles */
+        background-color: black; /* Establece el color de fondo del elemento en negro */
+        position: absolute; /* Establece la posición del elemento como absoluta para que pueda ser posicionado en relación con su contenedor primario */
+        top: 70.6%; /* Posiciona el elemento en el 70.6% del desplazamiento vertical del contenedor primario */
+        left: 45.5%; /* Posiciona el elemento en el 45.5% del desplazamiento horizontal del contenedor primario */
+        border-radius: 5px; /* Aplica un radio de borde de 5px */
+    }
+    
